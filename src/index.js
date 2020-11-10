@@ -11,7 +11,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+const rootEl = document.getElementById('root');
+
+//event handler
+rootEl.onclick = (evt) => {
+  console.log ('handler: clicked');
+  console.log (evt);
+};
+
+//event listener
+rootEl.addEventListener('click', evt => {
+  console.log('listener: clicked');
+  console.log(evt);
+})
